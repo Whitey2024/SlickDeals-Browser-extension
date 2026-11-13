@@ -74,7 +74,27 @@ Create `manifest.json` and paste in the following:
 
 ```json
 {
-  "manifest_version": 3
+  "manifest_version": 3,
+  "name": "Slickdeals Hide AliExpress",
+  "version": "1.1.0",
+  "description": "Hides all AliExpress deals on Slickdeals.net",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://slickdeals.net/*",
+        "*://*.slickdeals.net/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "slickdeals-hide-aliexpress@local",
+      "strict_min_version": "109.0"
+    }
+  }
 }
 ```
 
@@ -83,6 +103,11 @@ Create `styles.css` and paste in the following:
 ```css
 .slickdeals-hide-aliexpress {
   display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 ```
 load unpacked the folder containing these three files in your browser extensions management tab.
