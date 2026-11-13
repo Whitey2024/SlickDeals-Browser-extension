@@ -2,7 +2,7 @@ create folder called slickdeals-hide-aliexpress
 create a text file and paste the contents below, the rename "manifest.js"
 
 '''js
-(function () {
+//(function () {
   "use strict";
 
   const STORE_NAME = /aliexpress/i;
