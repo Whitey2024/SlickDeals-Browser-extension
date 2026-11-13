@@ -1,5 +1,7 @@
 create folder called slickdeals-hide-aliexpress
 create a text file and paste the contents below, the rename "manifest.js"
+
+**********************************************************************************************************
 (function () {
   "use strict";
 
@@ -70,6 +72,8 @@ create a text file and paste the contents below, the rename "manifest.js"
 ********************************************************************************************************
 
 create a text file and paste the following renaming "manifest.json"
+
+*********************************************************************************************************
 {
   "manifest_version": 3,
   "name": "Slickdeals Hide AliExpress",
@@ -97,6 +101,8 @@ create a text file and paste the following renaming "manifest.json"
 **********************************************************************************************************
 
 create a third text file with the following, renaming it "styles.css"
+
+**********************************************************************************************************
 
 .slickdeals-hide-aliexpress {
   display: none !important;
