@@ -1,8 +1,8 @@
 create folder called slickdeals-hide-aliexpress
-create a text file and paste the contents below, the rename "manifest.js"
+Create `content.js` and paste in the following:
 
-'''js
-//(function () {
+```js
+(function () {
   "use strict";
 
   const STORE_NAME = /aliexpress/i;
@@ -68,50 +68,23 @@ create a text file and paste the contents below, the rename "manifest.js"
 
   console.log("[Slickdeals Hide AliExpress] Active");
 })();
-'''
+```
 
-create a text file and paste the following renaming "manifest.json"
+Create `manifest.json` and paste in the following:
 
-'''json
+```json
 {
-  "manifest_version": 3,
-  "name": "Slickdeals Hide AliExpress",
-  "version": "1.1.0",
-  "description": "Hides all AliExpress deals on Slickdeals.net",
-  "content_scripts": [
-    {
-      "matches": [
-        "*://slickdeals.net/*",
-        "*://*.slickdeals.net/*"
-      ],
-      "js": ["content.js"],
-      "css": ["styles.css"],
-      "run_at": "document_idle"
-    }
-  ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "slickdeals-hide-aliexpress@local",
-      "strict_min_version": "109.0"
-    }
-  }
+  "manifest_version": 3
 }
-'''
+```
 
-create a third text file with the following, renaming it "styles.css"
+Create `styles.css` and paste in the following:
 
-'''css
-
+```css
 .slickdeals-hide-aliexpress {
   display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
 }
-'''
-
+```
 load unpacked the folder containing these three files in your browser extensions management tab.
 
 
